@@ -1,0 +1,602 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Trinetra — From a Diploma Project to an Emerging Startup Journey</title>
+<meta name="description" content="Trinetra: from a Diploma-level student project to an emerging startup — a smart secure examination platform and a digital gatepass system.">
+
+<!-- Google Fonts -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+<!-- Bootstrap 5 CSS -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+<!-- Bootstrap Icons -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
+<!-- AOS scroll animations -->
+<link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+
+<link rel="stylesheet" href="style.css">
+
+<!-- Applied immediately, before first paint, to avoid a flash of the wrong theme -->
+<script>
+(function(){
+  try{
+    var saved = localStorage.getItem('tn-theme');
+    var systemLight = window.matchMedia && window.matchMedia('(prefers-color-scheme: light)').matches;
+    var theme = saved || (systemLight ? 'light' : 'dark');
+    if(theme === 'light'){ document.documentElement.setAttribute('data-theme','light'); }
+  }catch(e){}
+})();
+</script>
+</head>
+<body>
+
+<!-- ================= AMBIENT BACKGROUND ================= -->
+<div class="ambient-bg" aria-hidden="true">
+  <div class="grid-overlay"></div>
+  <div class="glow glow-1"></div>
+  <div class="glow glow-2"></div>
+</div>
+
+<!-- ================= NAVBAR ================= -->
+<nav class="tn-nav" id="tnNav">
+  <div class="tn-nav-inner">
+    <a href="#home" class="tn-logo">
+      <span class="tn-logo-mark" aria-hidden="true">
+        <svg viewBox="0 0 40 40" width="28" height="28"><circle cx="20" cy="20" r="18" fill="none" stroke="currentColor" stroke-width="1.6"/><circle cx="20" cy="20" r="5" fill="currentColor"/></svg>
+      </span>
+      TRINETRA
+    </a>
+
+    <button class="tn-burger" id="tnBurger" aria-label="Open menu" aria-expanded="false" aria-controls="tnMobileMenu">
+      <span></span><span></span><span></span>
+    </button>
+
+    <ul class="tn-links d-none d-lg-flex" id="tnLinks">
+      <li><a href="#journey" class="tn-link">Journey</a></li>
+      <li><a href="#products" class="tn-link">Products</a></li>
+      <li><a href="#timeline" class="tn-link">Timeline</a></li>
+      <li><a href="#achievements" class="tn-link">Achievements</a></li>
+      <li><a href="#team" class="tn-link">Team</a></li>
+      <li><a href="#vision" class="tn-link">Vision</a></li>
+    </ul>
+
+    <a href="#journey" class="tn-cta d-none d-lg-inline-flex">Explore Journey <i class="bi bi-arrow-down"></i></a>
+
+    <button class="tn-theme-toggle" id="tnThemeToggle" aria-label="Switch to light theme" title="Switch theme">
+      <i class="bi bi-moon-stars" id="tnThemeIcon"></i>
+    </button>
+  </div>
+
+  <div class="tn-mobile-menu" id="tnMobileMenu">
+    <a href="#journey">Journey</a>
+    <a href="#products">Products</a>
+    <a href="#timeline">Timeline</a>
+    <a href="#achievements">Achievements</a>
+    <a href="#team">Team</a>
+    <a href="#vision">Vision</a>
+  </div>
+</nav>
+
+<!-- ================= HERO ================= -->
+<header class="tn-hero" id="home">
+  <div class="tn-hero-eye" aria-hidden="true">
+    <div class="tn-eye-ring r1"></div>
+    <div class="tn-eye-ring r2"></div>
+    <div class="tn-eye-ring r3"></div>
+    <div class="tn-eye-core"></div>
+  </div>
+
+  <div class="container tn-hero-content">
+    <div class="tn-logo-wrap" data-aos="fade-up">
+      <div class="tn-img-slot tn-hero-logo" data-label="Trinetra Logo" data-icon="bi-eye">
+        <img src="assets/images/trinetra-logo.png" alt="Trinetra logo" onerror="tnImgFallback(this)" loading="eager">
+      </div>
+    </div>
+
+    <p class="tn-eyebrow" data-aos="fade-up" data-aos-delay="80">Diploma Project → Emerging Startup</p>
+    <h1 class="tn-hero-title" data-aos="fade-up" data-aos-delay="140">TRINETRA</h1>
+    <p class="tn-hero-subtitle" data-aos="fade-up" data-aos-delay="200">From a Diploma Project to an Emerging Startup Journey</p>
+    <p class="tn-hero-tagline" data-aos="fade-up" data-aos-delay="260">Building technology to solve real problems.</p>
+
+    <div class="tn-hero-actions" data-aos="fade-up" data-aos-delay="320">
+      <a href="#journey" class="btn-tn btn-tn-primary">Explore Our Journey</a>
+      <a href="#achievements" class="btn-tn btn-tn-ghost">Our Achievements</a>
+    </div>
+  </div>
+
+  <div class="tn-scroll-cue" aria-hidden="true"><span></span></div>
+</header>
+
+<!-- ================= STATEMENT ================= -->
+<section class="tn-statement">
+  <div class="container">
+    <p class="tn-statement-line" data-reveal>We didn't start with a product.</p>
+    <p class="tn-statement-line tn-statement-accent" data-reveal>We started with a problem.</p>
+    <div class="tn-flow" data-aos="fade-up" data-aos-delay="100">
+      <span>Observe</span><i class="bi bi-arrow-right"></i>
+      <span>Understand</span><i class="bi bi-arrow-right"></i>
+      <span>Build</span><i class="bi bi-arrow-right"></i>
+      <span>Test</span><i class="bi bi-arrow-right"></i>
+      <span>Improve</span><i class="bi bi-arrow-right"></i>
+      <span>Compete</span><i class="bi bi-arrow-right"></i>
+      <span>Scale</span>
+    </div>
+  </div>
+</section>
+
+<!-- ================= STATISTICS ================= -->
+<section class="tn-stats">
+  <div class="container">
+    <div class="tn-stats-grid">
+      <div class="tn-stat" data-aos="fade-up">
+        <span class="tn-stat-num" data-count="2">0</span>
+        <span class="tn-stat-label">Major Solutions</span>
+      </div>
+      <div class="tn-stat" data-aos="fade-up" data-aos-delay="60">
+        <span class="tn-stat-num" data-static="1 Month">0</span>
+        <span class="tn-stat-label">To First Prototype</span>
+      </div>
+      <div class="tn-stat" data-aos="fade-up" data-aos-delay="120">
+        <span class="tn-stat-num" data-static="3rd">0</span>
+        <span class="tn-stat-label">Convergence 2026</span>
+      </div>
+      <div class="tn-stat" data-aos="fade-up" data-aos-delay="180">
+        <span class="tn-stat-num" data-static="₹2.5L">0</span>
+        <span class="tn-stat-label">SSIP Grant</span>
+      </div>
+      <div class="tn-stat" data-aos="fade-up" data-aos-delay="240">
+        <span class="tn-stat-num" data-static="1st">0</span>
+        <span class="tn-stat-label">Foundation Day Rank</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= ORIGIN STORY ================= -->
+<section class="tn-origin" id="journey">
+  <div class="container">
+    <div class="row align-items-center g-5">
+      <div class="col-lg-6" data-aos="fade-right">
+        <p class="tn-eyebrow">The Origin</p>
+        <h2 class="tn-h2">Can we build something that actually solves a problem?</h2>
+        <p class="tn-body">
+          The idea for Trinetra originated toward the end of the 3rd semester of Diploma,
+          under the mentorship of <strong>Alkesh M. Machhar</strong>. The team identified
+          real problems around online examination security, examination cheating,
+          manual gatepass processes, and paper-based administration.
+        </p>
+        <p class="tn-body">
+          The first objective was never to build a huge product — it was to see whether
+          a genuine, everyday problem could actually be solved through technology.
+        </p>
+        <div class="tn-mentor-tag">
+          <i class="bi bi-person-badge"></i>
+          Mentored by Alkesh M. Machhar
+        </div>
+      </div>
+      <div class="col-lg-6" data-aos="fade-left">
+        <div class="tn-origin-visual">
+          <div class="tn-origin-word">PROBLEM</div>
+          <div class="tn-origin-arrow"><i class="bi bi-arrow-down"></i></div>
+          <div class="tn-origin-word tn-origin-word-accent">IDEA</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= EVOLUTION TIMELINE ================= -->
+<section class="tn-timeline-section" id="timeline">
+  <div class="container">
+    <p class="tn-eyebrow text-center" data-aos="fade-up">The Evolution</p>
+    <h2 class="tn-h2 text-center" data-aos="fade-up">Eight Milestones. One Journey.</h2>
+
+    <div class="tn-timeline" id="tnTimeline">
+
+      <div class="tn-tl-item" data-aos="fade-up">
+        <div class="tn-tl-num">01</div>
+        <div class="tn-tl-card">
+          <span class="tn-tl-tag">End of Diploma 3rd Semester</span>
+          <h3>The Idea</h3>
+          <p>Under the mentorship of Alkesh M. Machhar, the team identified real-world problems that could be solved through technology.</p>
+          <div class="tn-tl-visual">Problem <i class="bi bi-arrow-right"></i> Idea</div>
+        </div>
+      </div>
+
+      <div class="tn-tl-item" data-aos="fade-up">
+        <div class="tn-tl-num">02</div>
+        <div class="tn-tl-card">
+          <span class="tn-tl-tag">~1 Month</span>
+          <h3>First Prototype</h3>
+          <p>The first Trinetra prototype was built within approximately one month — a basic screen-monitoring system aimed at addressing cheating during online examinations.</p>
+          <div class="tn-tl-visual">1 Month <i class="bi bi-arrow-right"></i> First Prototype</div>
+        </div>
+      </div>
+
+      <div class="tn-tl-item" data-aos="fade-up">
+        <div class="tn-tl-num">03</div>
+        <div class="tn-tl-card">
+          <span class="tn-tl-tag">B. S. Patel Polytechnic</span>
+          <h3>Real-World Testing</h3>
+          <p>The team began testing the prototype at B. S. Patel Polytechnic, moving Trinetra beyond an academic concept into a real environment.</p>
+          <div class="tn-tl-visual">Prototype <i class="bi bi-arrow-right"></i> Real Environment</div>
+        </div>
+      </div>
+
+      <div class="tn-tl-item" data-aos="fade-up">
+        <div class="tn-tl-num">04</div>
+        <div class="tn-tl-card">
+          <span class="tn-tl-tag">Continuous Development</span>
+          <h3>Product Evolution</h3>
+          <p>Testing feedback pushed the platform forward, and a second solution — the Trinetra Digital Gatepass System — was introduced.</p>
+          <div class="tn-tl-visual tn-tl-visual-stack">
+            <span>Basic Screen Monitoring</span>
+            <i class="bi bi-arrow-down"></i>
+            <span>Smart Secure Examination Platform</span>
+            <i class="bi bi-arrow-down"></i>
+            <span>Real-World Digital Solutions</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="tn-tl-item" data-aos="fade-up">
+        <div class="tn-tl-num">05</div>
+        <div class="tn-tl-card">
+          <span class="tn-tl-tag">January 2026</span>
+          <h3>Tech Fest 2026</h3>
+          <p>Trinetra's first major competitive exposure — participating in Tech Fest 2026.</p>
+          <div class="tn-img-slot tn-tl-photo tn-tl-photo-square" data-label="Tech Fest 2026" data-icon="bi-trophy">
+            <img src="assets/images/tech-fest.jpeg" alt="Trinetra team at Tech Fest 2026" onerror="tnImgFallback(this)">
+          </div>
+        </div>
+      </div>
+
+      <div class="tn-tl-item" data-aos="fade-up">
+        <div class="tn-tl-num">06</div>
+        <div class="tn-tl-card">
+          <span class="tn-tl-tag">Competition</span>
+          <h3>Convergence 2026</h3>
+          <p>Trinetra achieved 3rd Rank at Convergence 2026 — a major recognition moment for the team.</p>
+          <div class="tn-tl-badge">
+            <span class="tn-tl-badge-num">#3</span>
+            <span class="tn-tl-badge-label">CONVERGENCE 2026</span>
+          </div>
+          <div class="tn-img-slot tn-tl-photo tn-tl-photo-wide" data-label="Convergence 2026" data-icon="bi-award">
+            <img src="assets/images/convergence.jpeg" alt="Trinetra at Convergence 2026" onerror="tnImgFallback(this)">
+          </div>
+        </div>
+      </div>
+
+      <div class="tn-tl-item" data-aos="fade-up">
+        <div class="tn-tl-num">07</div>
+        <div class="tn-tl-card">
+          <span class="tn-tl-tag">SSIP</span>
+          <h3>Selected Under SSIP</h3>
+          <p>Trinetra was selected under SSIP and secured a grant of ₹2,50,000 — an important transition from a student project toward a serious innovation journey.</p>
+          <div class="tn-tl-counter" data-target="250000" data-prefix="₹">₹0</div>
+          <div class="tn-img-slot tn-tl-photo tn-tl-photo-portrait" data-label="SSIP Selection" data-icon="bi-cash-coin">
+            <img src="assets/images/ssip.jpeg" alt="Trinetra SSIP selection" onerror="tnImgFallback(this)">
+          </div>
+        </div>
+      </div>
+
+      <div class="tn-tl-item" data-aos="fade-up">
+        <div class="tn-tl-num">08</div>
+        <div class="tn-tl-card">
+          <span class="tn-tl-tag">Foundation Day</span>
+          <h3>Ganpat University Foundation Day</h3>
+          <p>Trinetra achieved 1st Rank at the Foundation Day of Ganpat University.</p>
+          <div class="tn-tl-badge tn-tl-badge-gold">
+            <span class="tn-tl-badge-num">#1</span>
+            <span class="tn-tl-badge-label">FOUNDATION DAY · GANPAT UNIVERSITY</span>
+          </div>
+          <div class="tn-img-slot tn-tl-photo tn-tl-photo-tall" data-label="Foundation Day" data-icon="bi-mortarboard">
+            <img src="assets/images/foundation-day.jpeg" alt="Trinetra at Ganpat University Foundation Day" onerror="tnImgFallback(this)">
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ================= TWO PRODUCTS ================= -->
+<section class="tn-products" id="products">
+  <div class="container-fluid px-0">
+    <div class="tn-products-grid">
+
+      <div class="tn-product tn-product-1" data-aos="fade-right">
+        <span class="tn-product-eyebrow">Product 01</span>
+        <h3 class="tn-product-title">TRINETRA<br>Smart AI-Based Secure Examination Platform</h3>
+        <p class="tn-product-desc">
+          A smart examination platform designed to make online assessments more
+          secure, organized, and reliable — its journey began with real-time
+          screen monitoring and has evolved toward a more powerful
+          examination-security platform.
+        </p>
+        <div class="tn-product-concept">Real-Time Examination Security</div>
+      </div>
+
+      <div class="tn-product tn-product-2" data-aos="fade-left">
+        <span class="tn-product-eyebrow">Product 02</span>
+        <h3 class="tn-product-title">TRINETRA<br>Digital Gatepass System</h3>
+        <p class="tn-product-desc">
+          A paperless digital gatepass system designed to replace traditional,
+          manual gatepass processes with a faster, more organized digital
+          workflow.
+        </p>
+        <div class="tn-product-concept">Paperless → Digital → Efficient</div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ================= BEFORE / AFTER ================= -->
+<section class="tn-before-after">
+  <div class="container">
+    <p class="tn-eyebrow text-center" data-aos="fade-up">Problem → Solution</p>
+    <h2 class="tn-h2 text-center" data-aos="fade-up">What Trinetra Changes</h2>
+
+    <div class="row g-4 mt-3">
+      <div class="col-md-6" data-aos="fade-up">
+        <div class="tn-ba-card tn-ba-before">
+          <h4><i class="bi bi-x-circle"></i> Before Trinetra</h4>
+          <ul>
+            <li>Online examination cheating concerns</li>
+            <li>Basic monitoring limitations</li>
+            <li>Manual, paper-based gatepass processes</li>
+            <li>Repetitive administrative work</li>
+            <li>Lack of centralized digital workflows</li>
+          </ul>
+        </div>
+      </div>
+      <div class="col-md-6" data-aos="fade-up" data-aos-delay="100">
+        <div class="tn-ba-card tn-ba-after">
+          <h4><i class="bi bi-check-circle"></i> After Trinetra</h4>
+          <ul>
+            <li>Secure digital examination approach</li>
+            <li>Smart examination platform</li>
+            <li>Paperless gatepass workflow</li>
+            <li>Technology-driven administration</li>
+            <li>Continuous product improvement</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= ACHIEVEMENTS ================= -->
+<section class="tn-achievements" id="achievements">
+  <div class="container">
+    <p class="tn-eyebrow text-center" data-aos="fade-up">Recognition</p>
+    <h2 class="tn-h2 text-center" data-aos="fade-up">Achievements</h2>
+
+    <div class="tn-ach-grid">
+      <div class="tn-ach-card" data-aos="zoom-in">
+        <i class="bi bi-trophy tn-ach-icon"></i>
+        <h4>Tech Fest 2026</h4>
+        <p>First major competitive exposure</p>
+      </div>
+      <div class="tn-ach-card" data-aos="zoom-in" data-aos-delay="80">
+        <i class="bi bi-award tn-ach-icon"></i>
+        <h4>3rd Rank</h4>
+        <p>Convergence 2026</p>
+      </div>
+      <div class="tn-ach-card" data-aos="zoom-in" data-aos-delay="160">
+        <i class="bi bi-rocket-takeoff tn-ach-icon"></i>
+        <h4>Selected Under SSIP</h4>
+        <p>Student Startup &amp; Innovation Policy</p>
+      </div>
+      <div class="tn-ach-card" data-aos="zoom-in" data-aos-delay="240">
+        <i class="bi bi-cash-coin tn-ach-icon"></i>
+        <h4>₹2,50,000</h4>
+        <p>SSIP Grant</p>
+      </div>
+      <div class="tn-ach-card" data-aos="zoom-in" data-aos-delay="320">
+        <i class="bi bi-mortarboard tn-ach-icon"></i>
+        <h4>1st Rank</h4>
+        <p>Ganpat University Foundation Day</p>
+      </div>
+    </div>
+
+    <!-- Certificates gallery -->
+    <div class="tn-cert-gallery" data-aos="fade-up">
+      <div class="tn-img-slot tn-cert" data-label="Certificate — Tech Fest 2026" data-icon="bi-file-earmark-text">
+        <img src="assets/images/certificates/tech-fest-certificate.jpeg" alt="Tech Fest 2026 certificate" onerror="tnImgFallback(this)">
+      </div>
+      <div class="tn-img-slot tn-cert" data-label="Certificate — Convergence 2026" data-icon="bi-file-earmark-text">
+        <img src="assets/images/certificates/convergence-certificate.jpeg" alt="Convergence 2026 certificate" onerror="tnImgFallback(this)">
+      </div>
+   
+      <div class="tn-img-slot tn-cert" data-label="Certificate — Foundation Day" data-icon="bi-file-earmark-text">
+        <img src="assets/images/certificates/foundation-day-certificate.jpeg" alt="Ganpat University Foundation Day certificate" onerror="tnImgFallback(this)">
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= THE GRANT MOMENT ================= -->
+<section class="tn-grant">
+  <div class="ambient-bg" aria-hidden="true"><div class="grid-overlay"></div></div>
+  <div class="container text-center">
+    <p class="tn-eyebrow" data-aos="fade-up">The Grant Moment</p>
+    <h2 class="tn-grant-title" data-aos="fade-up" data-aos-delay="80">FROM PROJECT<br>TO POSSIBILITY</h2>
+    <div class="tn-grant-amount" data-aos="zoom-in" data-aos-delay="160">
+      <span class="tn-tl-counter" data-target="250000" data-prefix="₹">₹0</span>
+    </div>
+    <p class="tn-grant-text" data-aos="fade-up" data-aos-delay="240">
+      SSIP support became an important milestone in our journey, giving Trinetra
+      the opportunity to move beyond a student project and work toward building
+      something with larger real-world potential.
+    </p>
+  </div>
+</section>
+
+<!-- ================= THE JOURNEY (compact vertical) ================= -->
+<section class="tn-journey-strip">
+  <div class="container">
+    <p class="tn-eyebrow text-center" data-aos="fade-up">At a Glance</p>
+    <h2 class="tn-h2 text-center" data-aos="fade-up">The Journey So Far</h2>
+
+    <div class="tn-journey-line">
+      <div class="tn-journey-step" data-aos="fade-up"><span class="tn-journey-dot"></span><strong>3rd Semester</strong><em>Idea</em></div>
+      <div class="tn-journey-step" data-aos="fade-up" data-aos-delay="40"><span class="tn-journey-dot"></span><strong>1 Month Later</strong><em>First Prototype</em></div>
+      <div class="tn-journey-step" data-aos="fade-up" data-aos-delay="80"><span class="tn-journey-dot"></span><strong>B. S. Patel Polytechnic</strong><em>Real-World Testing</em></div>
+      <div class="tn-journey-step" data-aos="fade-up" data-aos-delay="120"><span class="tn-journey-dot"></span><strong>Tech Fest 2026</strong><em>Competitive Exposure</em></div>
+      <div class="tn-journey-step" data-aos="fade-up" data-aos-delay="160"><span class="tn-journey-dot"></span><strong>Convergence 2026</strong><em>3rd Rank</em></div>
+      <div class="tn-journey-step" data-aos="fade-up" data-aos-delay="200"><span class="tn-journey-dot"></span><strong>SSIP</strong><em>Selected</em></div>
+      <div class="tn-journey-step" data-aos="fade-up" data-aos-delay="240"><span class="tn-journey-dot"></span><strong>₹2,50,000</strong><em>Grant</em></div>
+      <div class="tn-journey-step" data-aos="fade-up" data-aos-delay="280"><span class="tn-journey-dot"></span><strong>Foundation Day</strong><em>1st Rank</em></div>
+      <div class="tn-journey-step tn-journey-step-final" data-aos="fade-up" data-aos-delay="320"><span class="tn-journey-dot"></span><strong>Today</strong><em>Building toward startup</em></div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= STARTUP VISION ================= -->
+<section class="tn-vision" id="vision">
+  <div class="container text-center">
+    <h2 class="tn-vision-title" data-aos="fade-up">TRINETRA IS JUST<br>THE BEGINNING.</h2>
+    <p class="tn-body tn-vision-sub" data-aos="fade-up" data-aos-delay="80">
+      Our long-term vision is to grow Trinetra into a complete
+      <strong>Campus Management Platform</strong> — solving more real-world
+      campus problems through technology and building an ecosystem instead of
+      isolated solutions.
+    </p>
+
+    <div class="tn-roadmap" data-aos="fade-up" data-aos-delay="160">
+      <div class="tn-roadmap-stage tn-roadmap-current">
+        <span class="tn-roadmap-tag">Today</span>
+        <p>Secure Examination Platform</p>
+        <p>Digital Gatepass</p>
+      </div>
+      <i class="bi bi-arrow-right tn-roadmap-arrow"></i>
+      <div class="tn-roadmap-stage">
+        <span class="tn-roadmap-tag">Next</span>
+        <p>More Campus Management Solutions</p>
+      </div>
+      <i class="bi bi-arrow-right tn-roadmap-arrow"></i>
+      <div class="tn-roadmap-stage tn-roadmap-future">
+        <span class="tn-roadmap-tag">Future</span>
+        <p>Complete Campus Management Platform</p>
+      </div>
+    </div>
+    <p class="tn-vision-note" data-aos="fade-up" data-aos-delay="220">Current products and future vision — clearly separate, nothing here is presented as already built.</p>
+  </div>
+</section>
+
+<!-- ================= HUMAN STORY ================= -->
+<section class="tn-human">
+  <div class="container">
+    <div class="row align-items-center g-5">
+      <div class="col-lg-6" data-aos="fade-right">
+        <p class="tn-eyebrow">Our Story</p>
+        <h2 class="tn-h2">We Started as Students.</h2>
+        <p class="tn-body">
+          Trinetra grew through experimentation, real-world testing,
+          competitions, recognition, and funding — not overnight, and not
+          alone. Every milestone came from actually building and testing,
+          then building again.
+        </p>
+      </div>
+      <div class="col-lg-6" data-aos="fade-left">
+        <blockquote class="tn-quote">
+          A classroom idea can become a real-world solution when you actually build it.
+        </blockquote>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= TEAM ================= -->
+<section class="tn-team" id="team">
+  <div class="container">
+    <p class="tn-eyebrow text-center" data-aos="fade-up">The People Behind Trinetra</p>
+    <h2 class="tn-h2 text-center" data-aos="fade-up">Founding Team</h2>
+
+    <div class="tn-img-slot tn-team-photo" data-aos="fade-up" data-label="Team Photo" data-icon="bi-people">
+      <img src="assets/images/team.jpeg" alt="Trinetra founding team" onerror="tnImgFallback(this)">
+    </div>
+
+    <div class="tn-team-grid">
+      <div class="tn-team-card" data-aos="fade-up" data-aos-delay="180">
+        <div class="tn-img-slot tn-team-avatar-photo" data-label="Ayush Panchani" data-icon="bi-person">
+          <img src="assets/images/team/ayush.jpeg" alt="Ayush Panchani, Database Handler" onerror="tnImgFallback(this)">
+        </div>
+        <h4>Ayush Panchani</h4>
+        <p>Database Handler</p>
+      </div>
+      <div class="tn-team-card" data-aos="fade-up" data-aos-delay="240">
+        <div class="tn-img-slot tn-team-avatar-photo" data-label="Mantra Zalavadiya" data-icon="bi-person">
+          <img src="assets/images/team/mantra.jpeg" alt="Mantra Zalavadiya, UI/UX" onerror="tnImgFallback(this)">
+        </div>
+        <h4>Mantra Zalavadiya</h4>
+        <p>UI/UX</p>
+      </div>
+
+        <div class="tn-team-card" data-aos="fade-up">
+        <div class="tn-img-slot tn-team-avatar-photo" data-label="Anjan A. Aghera" data-icon="bi-person">
+          <img src="assets/images/team/anjan.jpeg" alt="Anjan A. Aghera, Founder" onerror="tnImgFallback(this)">
+        </div>
+        <h4>Anjan  Aghera</h4>
+        <p>Founder</p>
+      </div>
+        <div class="tn-team-card" data-aos="fade-up" data-aos-delay="60">
+        <div class="tn-img-slot tn-team-avatar-photo" data-label="Kavy Nandha" data-icon="bi-person">
+          <img src="assets/images/team/kavy.jpeg" alt="Kavy Nandha, Co-Founder" onerror="tnImgFallback(this)">
+        </div>
+        <h4>Kavy Nandha</h4>
+        <p>Co-Founder</p>
+      </div>
+      
+      <div class="tn-team-card" data-aos="fade-up" data-aos-delay="120">
+        <div class="tn-img-slot tn-team-avatar-photo" data-label="Mahek Bathani" data-icon="bi-person">
+          <img src="assets/images/team/mahek.jpeg" alt="Mahek Bathani, Resource Manager" onerror="tnImgFallback(this)">
+        </div>
+        <h4>Mahek Bathani</h4>
+        <p>Resource Manager</p>
+      </div>
+     
+    
+     
+    </div>
+  </div>
+</section>
+
+<!-- ================= FOOTER ================= -->
+<footer class="tn-footer">
+  <div class="container">
+    <div class="row g-4">
+      <div class="col-lg-4">
+        <a href="#home" class="tn-logo tn-footer-logo">TRINETRA</a>
+        <p class="tn-footer-tag">Building technology. Solving real problems.</p>
+        <p class="tn-footer-flow">From Diploma → Innovation → Recognition → Startup</p>
+      </div>
+      <div class="col-lg-8">
+        <div class="tn-footer-links">
+          <a href="#team">Team</a>
+          <a href="#journey">Journey</a>
+          <a href="#products">Products</a>
+          <a href="#achievements">Achievements</a>
+          <a href="#vision">Vision</a>
+        </div>
+      </div>
+    </div>
+    <hr class="tn-footer-rule">
+    <p class="tn-footer-copy">© 2026 Trinetra. A Diploma project on its way to becoming a startup.</p>
+  </div>
+</footer>
+
+<button class="tn-to-top" id="tnToTop" aria-label="Back to top"><i class="bi bi-arrow-up"></i></button>
+
+<!-- Scripts -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+<script src="script.js"></script>
+</body>
+</html>
